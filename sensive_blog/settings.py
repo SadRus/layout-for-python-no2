@@ -5,7 +5,7 @@ env = Env()
 env.read_env()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+print("BASE_____DIR", BASE_DIR)
 COMPANY_COORDINATES = [55.751244, 37.618423]
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", [])
