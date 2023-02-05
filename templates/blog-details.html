@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-  <title>{{ post.title }} - Blog Details</title>
+<title>{{ post.title }} - Blog Details</title>
 {% endblock %}
 
 {% block content %}
@@ -34,13 +34,9 @@
         <div class="col-lg-8">
           <div class="main_blog_details">
             {% if post.image_url %}
-            <img class="img-fluid" src="{{ post.image_url }}" alt="" />
+              <img class="img-fluid" src="{{ post.image_url }}" alt="" />
             {% else %}
-            <img
-              class="img-fluid"
-              src="{% static 'img/banner/blog.png' %}"
-              alt=""
-            />
+              <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="" />
             {% endif %}
             <h4>{{ post.title }}</h4>
             <div class="user_details">
@@ -55,19 +51,12 @@
             </div>
             <p>{{ post.text }}</p>
             <div class="news_d_footer flex-column flex-sm-row">
-              <a href="#"
-                ><span class="align-middle mr-2">
-                  <i class="ti-heart" style="color: rgb(255, 0, 0)"></i
-                ></span>
+              <a href="#"><span class="align-middle mr-2">
+                  <i class="ti-heart" style="color: rgb(255, 0, 0)"></i></span>
                 {{ post.likes_amount }} people like this
               </a>
-              <a
-                class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2"
-                href="#"
-                ><span class="align-middle mr-2">
-                  <i class="ti-themify-favicon"></i></span
-                >{{ post.comments|length }} Comments</a
-              >
+              <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#"><span class="align-middle mr-2">
+                  <i class="ti-themify-favicon"></i></span>{{ post.comments|length }} Comments</a>
               <div class="news_socail ml-sm-auto mt-sm-0 mt-2">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -76,28 +65,28 @@
               </div>
             </div>
           </div>
-  
+        
           <div class="comments-area">
             <h4>{{ post.comments|length }} Comments</h4>
             {% for comment in post.comments %}
-            <div class="comment-list">
-              <div class="single-comment justify-content-between d-flex">
-                <div class="user justify-content-between d-flex">
-                  <div class="desc">
-                    <h5><a href="#"> {{ comment.author }}</a></h5>
-                    <p class="date">{{ comment.published_at }}</p>
-                    <p class="comment">{{comment.text }}</p>
+              <div class="comment-list">
+                <div class="single-comment justify-content-between d-flex">
+                  <div class="user justify-content-between d-flex">
+                    <div class="desc">
+                      <h5><a href="#"> {{ comment.author }}</a></h5>
+                      <p class="date">{{ comment.published_at }}</p>
+                      <p class="comment">{{comment.text }}</p>
+                    </div>
+                  </div>
+                  <div class="reply-btn">
+                    <a href="" class="btn-reply text-uppercase">reply</a>
                   </div>
                 </div>
-                <div class="reply-btn">
-                  <a href="" class="btn-reply text-uppercase">reply</a>
-                </div>
               </div>
-            </div>
             {% endfor %}
           </div>
         </div>
-  
+      
         <!-- Start Blog Post Siddebar -->
         <div class="col-lg-4 sidebar-widgets">
           <div class="widget-wrap">
@@ -105,19 +94,13 @@
               <h4 class="single-sidebar-widget__title">Newsletter</h4>
               <div class="form-group mt-30">
                 <div class="col-autos">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inlineFormInputGroup"
-                    placeholder="Enter email"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter email'"
-                  />
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
+                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" />
                 </div>
               </div>
               <button class="bbtns d-block mt-20 w-100">Subcribe</button>
             </div>
-  
+          
             <div class="single-sidebar-widget post-category-widget">
               <h4 class="single-sidebar-widget" style="height: 200px">
                 Здесь будет реклама
@@ -149,34 +132,18 @@
             <h6>Newsletter</h6>
             <p>Stay update with our latest</p>
             <div class="" id="mc_embed_signup">
-              <form
-                target="_blank"
-                novalidate
+              <form target="_blank" novalidate
                 action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                method="get"
-                class="form-inline"
-              >
+                method="get" class="form-inline">
                 <div class="d-flex flex-row">
-                  <input
-                    class="form-control"
-                    name="EMAIL"
-                    placeholder="Enter Email"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter Email '"
-                    required=""
-                    type="email"
-                  />
-  
+                  <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter Email '" required="" type="email" />
+                
                   <button class="click-btn btn btn-default">
                     <span class="lnr lnr-arrow-right"></span>
                   </button>
                   <div style="position: absolute; left: -5000px">
-                    <input
-                      name="b_36c4fd991d266f23781ded980_aefe40901a"
-                      tabindex="-1"
-                      value=""
-                      type="text"
-                    />
+                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text" />
                   </div>
                 </div>
                 <div class="info"></div>
@@ -206,9 +173,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="footer-bottom d-flex justify-content-center align-items-center flex-wrap"
-      >
+      <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
         <p class="footer-text m-0">
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           Copyright &copy;
